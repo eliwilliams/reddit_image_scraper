@@ -64,14 +64,11 @@ def saveGallery(savepath, glist):
 def fixDir(savepath):
 	if not os.path.exists(savepath):
 		os.mkdir(savepath)
-		os.chdir(savepath)
-	else:
-		os.chdir(savepath)
-	return
+	os.chdir(savepath)
 	
 	
 def main():
-	subreddit = "wtf" #sys.argv[1]
+	subreddit = "funny" #sys.argv[1]
 	header = {"Python Image Scraper" : "/u/dudest"}
 	un = getpass.getuser()
 	sp = "/Users/{0}/Pictures/{1}".format(un, subreddit) #sys.argv[2]
